@@ -1,1 +1,35 @@
+---
+- summary: |
+    Проверка входа пользователя с существующими логином и паролем
+  requirement: |
+    При верном вводе логине и пароля пользователь должен войти в систему
+  prerequisites: |
+    no data
+  test-data: |
+    Тестовые данные
+    Email = laflisein08@mail.ru password = 123456!
+  steps:
+    - Нажимаем кнопку Sign in
+    - Вводим email
+    - Вводим password
+    - Нажимаем кнопку Submit
+  expected-result: |
+    Пользователь вошел в систему
+
+- summary: |
+    Проверка входа пользователя с существующими логином и паролем
+  requirement: |
+    При верном вводе логине и пароля пользователь должен войти в систему
+  prerequisites: |
+    no data
+  test-data: |
+    Тестовые данные
+    Email = laflisein08@mail.ru password = 123456!
+  steps:
+    - Нажимаем кнопку Sign in
+    - Вводим email
+    - Вводим password
+    - Нажимаем кнопку Submit
+  expected-result: |
+    Пользователь вошел в систему
 
