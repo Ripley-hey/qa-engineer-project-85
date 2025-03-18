@@ -27,7 +27,21 @@
   steps:
     - Нажимаем кнопку Sign up
     - Нажимаем кнопку Sign in with Github
-    - Нажимаем на кнопку 
+    - Нажимаем на кнопку подверждения привязки Github
   expected-result: |
     Пользователь зарегистрирован через Github
 
+- summary: |
+    Проверка регистрации пользователя через Discord
+  requirement: |
+    Пользователь зарегистрирован через Discord
+  prerequisites: |
+    no data
+  test-data: |
+    no data
+  steps:
+    - Нажимаем кнопку Sign up
+    - Нажимаем кнопку Sign in with Discord
+    - Нажимаем на кнопку подверждения привязки Github
+  expected-result: |
+    Пользователь зарегистрирован через Github
