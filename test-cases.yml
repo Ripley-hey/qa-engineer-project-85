@@ -10,9 +10,9 @@
     Email = laflisein08@mail.ru password = 123456!
   steps:
     - Нажимаем кнопку Sign in
-    - Вводим email
-    - Вводим password
-    - Нажимаем кнопку Submit
+    - Ввести email
+    - Ввести password
+    - Нажать кнопку Submit
   expected-result: |
     Пользователь вошел в систему
 
@@ -25,11 +25,11 @@
   test-data: |
     no data
   steps:
-    - Нажимаем кнопку Sign up
-    - Нажимаем кнопку Sign in with Github
-    - Нажимаем на кнопку подверждения привязки Github
+    - Нажать кнопку Sign up
+    - Нажать кнопку Sign in with Github
+    - Нажать на кнопку подверждения привязки Github
   expected-result: |
-    Пользователь зарегистрирован через Github
+    Пользователь successfully authenticated
 
 - summary: |
     Проверка регистрации пользователя через Discord
@@ -40,8 +40,66 @@
   test-data: |
     no data
   steps:
-    - Нажимаем кнопку Sign up
-    - Нажимаем кнопку Sign in with Discord
-    - Нажимаем на кнопку подверждения привязки Github
+    - Нажать кнопку Sign up
+    - Нажать кнопку Sign in with Discord
+    - Ввести регистрационные данные от своего профиля в Discord
+    - Нажать кнопку Авторизовать
   expected-result: |
-    Пользователь зарегистрирован через Github
+    Пользователь зарегистрирован через Discord
+
+- summary: |
+    Проверка создание игры с другим игроком
+  requirement: |
+    Зарегистированный пользователь имеет возможность создать игру с другим игроком
+  prerequisites: |
+    Пользователь вошел в свой аккаунт или зарегистрировался
+  test-data: |
+    no data
+  steps:
+    - Нажать кнопку Create a game
+    - Выбрать любой Level, например одну звезду
+    - Выбрать Game Type - With other user
+    - Выбрать любой Time Control, например 12 min
+    - Выбрать Task по любому names и tags
+    - Нажать кнопку Create battle
+  expected-result: |
+    Создана игра с другим игроком
+
+- summary: |
+    Проверка создание игры с ботом
+  requirement: |
+    Зарегистированный пользователь имеет возможность создать игру с ботом
+  prerequisites: |
+    Пользователь вошел в свой аккаунт или зарегистрировался
+  test-data: |
+    no data
+  steps:
+    - Нажать кнопку Create a game
+    - Выбрать любой Level, например одну звезду
+    - Выбрать Game Type - With a bot
+    - Выбрать любой Time Control, например 12 min
+    - Выбрать Task по любому names и tags
+    - Нажать кнопку Create battle
+  expected-result: |
+    Создана игра с ботом
+
+- summary: |
+    Проверка создание с игры с другом
+  requirement: |
+    Зарегистированный пользователь имеет возможность создать игру с другом
+  prerequisites: |
+    Пользователь вошел в свой аккаунт или зарегистрировался
+  test-data: |
+    no data
+  steps:
+    - Нажать кнопку Create a game
+    - Выбрать любой Level, например одну звезду
+    - Выбрать Game Type - With a friends
+    - Выбрать любой Time Control, например 12 min
+    - Найти друга по имени в Choose opponent
+    - Выбрать Task по любому names и tags
+    - Нажать кнопку Create battle
+    - Дождаться, когда друг примет приглашение на игру
+    - В списке Lobby нажать на Continue  на строке, где написан никнейм пользователя и его друга
+  expected-result: |
+    Создана игра с другом
