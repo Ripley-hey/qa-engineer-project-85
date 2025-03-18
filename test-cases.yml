@@ -103,3 +103,39 @@
     - В списке Lobby нажать на Continue  на строке, где написан никнейм пользователя и его друга
   expected-result: |
     Создана игра с другом
+
+- summary: |
+    Проверка возможности пользователя играть без регистрации
+  requirement: |
+    Незарегистрированный пользователь может сыграть в игру
+  prerequisites: |
+    no data
+  test-data: |
+    no data
+  steps:
+    - Нажать на кнопку Try simple battle
+  expected-result: |
+    Пользователь играет без регистрации
+
+- summary: |
+    Проверка возможности создания турнира
+  requirement: |
+    Зарегистрированный пользователь может создать турнир
+  prerequisites: |
+    Пользователь вошел в свой аккаунт или зарегистрировался
+  test-data: |
+    no data
+  steps:
+    - Нажать на вкладку Tournaments
+    - Скроллить список до надписи Tournaments Info
+    - Скроллить до окна Create a new tournament
+    - Ввести любое название турнира в Name, например Pokemon
+    - Выбрать любой тип в Type, например versus
+    - Ввести любое описание в окно Description
+    - Выбрать любую дату в Starts at (Europe/Moscow)
+    - Выбрать любой тип в Access type, например public
+    - Выбрать любую стратегию в Task strategy
+    - Выбрать тип подсчета очков в Score strategy
+    - Выбрать галочки в Use chat и Use timer
+    - 
+
