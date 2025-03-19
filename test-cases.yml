@@ -21,7 +21,7 @@
   requirement: |
     Пользователь зарегистрирован через Github
   prerequisites: |
-    no data
+    Пользователь должен быть авторизирован на Github
   test-data: |
     no data
   steps:
