@@ -147,3 +147,37 @@
   expected-result: |
     Пользователь создал турнир 
 
+- summary: |
+    Успешная проверка, что система не позволяет зарегистрироваться с некорректным форматом email
+  requirement: |
+    При неверном вводе email система сообщает о некорректности email
+  prerequisites: |
+    no data
+  test-data: |
+    Email = @mail.ru 
+  steps:
+    - Нажать кнопку Sign up
+    - Ввести email
+    - Ввести password
+    - Нажать кнопку Submit
+  expected-result: |
+    Пользователь вошел в систему, сайт показывает личный кабинет
+
+- summary: |
+    Успешная проверка, что система не позволяет зарегистрироваться c занятым именем
+  requirement: |
+    При нажатии кнопки Submit система сообщает, что имя занято
+  prerequisites: |
+    no data
+  test-data: |
+    Nickname = Maria
+  steps:
+    - Нажать кнопку Sign up
+    - Ввести Nickname
+    - Ввести любой Email, например kkk123@mail.ru
+    - Ввести любой Password, например poema12!33
+    - Ввести тот же пароль в поле Password Confirmation
+    - Нажать кнопку Submit
+  expected-result: |
+    Неуспешный вход в систему, выводится сообщение, что имя занято
+
