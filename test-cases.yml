@@ -9,7 +9,7 @@
     Email = laflisein08@mail.ru 
     password = 123456!
   steps:
-    - Нажимаем кнопку Sign in
+    - Нажать кнопку Sign in
     - Ввести email
     - Ввести password
     - Нажать кнопку Submit
