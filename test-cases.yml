@@ -29,7 +29,7 @@
     - Нажать кнопку Sign in with Github
     - Нажать на кнопку подверждения привязки Github
   expected-result: |
-    Пользователь successfully authenticated
+    Пользователь успешно авторизован
 
 - summary: |
     Проверка регистрации пользователя через Discord
