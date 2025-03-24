@@ -6,7 +6,6 @@
   prerequisites: |
     no data
   test-data: |
-    Тестовые данные
     Email = laflisein08@mail.ru password = 123456!
   steps:
     - Нажимаем кнопку Sign in
